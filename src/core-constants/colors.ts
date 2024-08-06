@@ -9,4 +9,5 @@ export const colors = {
   red: '#FF3B30',
   green: '#34C759',
   lightYellow: '#FFF5D1',
+  textDarkGray: '#C5BEC0',
 };

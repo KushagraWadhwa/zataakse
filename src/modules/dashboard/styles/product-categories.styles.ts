@@ -4,9 +4,10 @@ import {colors} from '../../../core-constants';
 export const Styles = StyleSheet.create({
   mainView: {backgroundColor: 'white', flex: 1},
   searchShadow: {
-    margin: 10,
+    paddingVertical: 13,
     backgroundColor: 'white',
-    borderRadius: 25,
+    borderBottomLeftRadius: 25,
+    borderBottomRightRadius: 25,
     shadowColor: 'black',
     shadowOffset: {
       width: 0,
