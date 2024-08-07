@@ -1,3 +1,3 @@
 import searchIcon from '../assets/search.svg';
-
-export {searchIcon};
+import subCategory from '../assets/subCategory.png';
+export {searchIcon, subCategory};

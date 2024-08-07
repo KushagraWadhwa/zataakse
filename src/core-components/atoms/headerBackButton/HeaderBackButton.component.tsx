@@ -1,12 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import {
-  StyleProp,
-  Text,
-  TextInput,
-  TextStyle,
-  View,
-  ViewStyle,
-} from 'react-native';
+import {StyleProp, Text, TextStyle, View, ViewStyle} from 'react-native';
 import React from 'react';
 import {colors} from '../../../core-constants';
 import {Styles} from './HeaderBackButton.styles';
