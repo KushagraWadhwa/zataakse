@@ -7,18 +7,11 @@ import {LocalSvg} from 'react-native-svg/css';
 
 interface HeaderBackButtonProps {
   title?: string;
-  onChangeText?: (text: string) => void;
-  placeholderText?: string;
-  value?: string;
-  isMasked?: boolean | false;
-  viewStyle?: StyleProp<ViewStyle>;
-  fontsStyle?: StyleProp<TextStyle>;
-  placeholderColor?: string;
 }
 
 const HeaderBackButton = (props: HeaderBackButtonProps) => {
   return (
-    <View style={[Styles.mainView, props?.viewStyle]}>
+    <View style={Styles.mainView}>
       <View style={{flexDirection: 'row'}}>
         <View style={{justifyContent: 'center'}}>
           <LocalSvg asset={require('../../../../assets/blackBack.svg')} />
@@ -31,7 +24,7 @@ const HeaderBackButton = (props: HeaderBackButtonProps) => {
               color: colors.black,
               marginBottom: 5,
             }}>
-            {'Product Categories'}
+            {props?.title ?? 'Product Categories'}
           </Text>
           <Text style={{fontSize: 12, color: colors.black}}>
             {'Select any product to add'}

@@ -60,4 +60,23 @@ export const Styles = StyleSheet.create({
     marginLeft: 3,
     marginTop: 10,
   },
+  viewCard: {
+    color: colors.black,
+    textAlign: 'center',
+    justifyContent: 'center',
+    width: 64,
+    paddingVertical: 23,
+  },
+  viewCardShadow: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    shadowColor: 'black',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 4,
+  },
 });
