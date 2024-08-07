@@ -26,4 +26,15 @@ export const Styles = StyleSheet.create({
     paddingBottom: 10,
   },
   title: {color: colors.golden, paddingHorizontal: 10, paddingTop: 5},
+  flexRow: {flexDirection: 'row'},
+  justCount: {justifyContent: 'center'},
+  marLeft: {marginLeft: 15},
+  titleHead: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: colors.black,
+    marginBottom: 5,
+  },
+  subtitleHead: {fontSize: 12, color: colors.black},
+  justCenter: {justifyContent: 'center'},
 });

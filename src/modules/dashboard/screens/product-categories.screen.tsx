@@ -16,8 +16,13 @@ import {
 import {productDetails} from '../../../core-constants/product-details';
 import ItemList from '../../../core-components/atoms/itemList/ItemList.component';
 import {LocalSvg} from 'react-native-svg/css';
+import {NavigationProp, ParamListBase} from '@react-navigation/native';
 
-const ProductCategories = () => {
+interface ProductCategoriesProps {
+  navigation?: NavigationProp<ParamListBase>;
+}
+
+const ProductCategories = (props: ProductCategoriesProps) => {
   const [listData, setListData] = useState([]);
   const [selectedItem, setSelectedItem] = useState('');
   const [active, setActive] = useState(0);
@@ -26,6 +31,9 @@ const ProductCategories = () => {
     <View style={Styles.mainView}>
       <HeaderBackButton
         title={listData?.length > 0 ? title : 'Product Categories'}
+        onPressSearch={() => {
+          props?.navigation?.navigate('search');
+        }}
       />
       <View>
         {listData?.length <= 0 &&

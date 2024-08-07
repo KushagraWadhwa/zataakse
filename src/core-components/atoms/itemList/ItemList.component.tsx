@@ -1,7 +1,8 @@
 import React from 'react';
 import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
 import {Styles} from './ItemList.styles';
-import {drink} from '../../../../assets';
+import {drink, snickersChco} from '../../../../assets';
+import {LocalSvg} from 'react-native-svg/css';
 
 interface listData {
   id?: number;
@@ -13,6 +14,7 @@ interface listData {
 
 interface ItemListProps {
   itemListData?: Array<listData>;
+  search?: boolean;
 }
 
 const ItemList = (props: ItemListProps) => {
@@ -37,7 +39,10 @@ const ItemList = (props: ItemListProps) => {
                 </View>
               </View>
               <View>
-                <Image style={Styles.image} source={drink} />
+                <Image
+                  style={Styles.image}
+                  source={props?.search ? snickersChco : drink}
+                />
                 <TouchableOpacity style={Styles.addButon}>
                   <Text style={Styles.addText}>{'+ Add'}</Text>
                 </TouchableOpacity>
