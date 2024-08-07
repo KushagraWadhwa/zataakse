@@ -144,7 +144,12 @@ const ProductCategories = (props: ProductCategoriesProps) => {
                     ) : (
                       <>
                         <View style={Styles.cardShadow}>
-                          <Image style={Styles.imageView} source={item?.icon} />
+                          <LocalSvg
+                            width={64}
+                            height={64}
+                            style={Styles.imageView}
+                            asset={item?.icon}
+                          />
                         </View>
                         <Text style={Styles.cardText}>{item?.title}</Text>
                       </>

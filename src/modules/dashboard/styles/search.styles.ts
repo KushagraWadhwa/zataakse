@@ -32,4 +32,18 @@ export const Styles = StyleSheet.create({
   },
   title: {color: colors.black},
   iconView: {justifyContent: 'center', marginLeft: 8},
+  inputView: {
+    flexDirection: 'row',
+    marginHorizontal: 15,
+    marginVertical: 6,
+  },
+  justCenter: {justifyContent: 'center'},
+  imageView: {width: 26, height: 20},
+  titleText: {
+    fontSize: 12,
+    lineHeight: 18,
+    color: colors.black,
+    marginLeft: 10,
+    maxWidth: '90%',
+  },
 });

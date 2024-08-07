@@ -52,7 +52,7 @@ const SearchInputField = (props: SearchInputProps) => {
         />
       </View>
       <View style={{flexDirection: 'row'}}>
-        {props?.value?.length > 1 && (
+        {props?.value?.length >= 1 && (
           <TouchableOpacity
             onPress={() => {
               props?.onClear && props?.onClear();

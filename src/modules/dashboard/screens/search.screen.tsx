@@ -6,7 +6,6 @@ import {NavigationProp, ParamListBase} from '@react-navigation/native';
 import {allCategories} from '../../../core-constants/product-categories';
 import {LocalSvg} from 'react-native-svg/css';
 import {allProductsList} from '../../../core-constants/all-products';
-import {colors} from '../../../core-constants';
 import ItemList from '../../../core-components/atoms/itemList/ItemList.component';
 
 interface SearchProps {
@@ -69,28 +68,11 @@ const Search = (props: SearchProps) => {
           .slice(0, 5)
           .map((item, index) => {
             return (
-              <View
-                key={index}
-                style={{
-                  flexDirection: 'row',
-                  marginHorizontal: 15,
-                  marginVertical: 6,
-                }}>
-                <View style={{justifyContent: 'center'}}>
-                  <LocalSvg
-                    asset={item?.image}
-                    style={{width: 26, height: 20}}
-                  />
+              <View key={index} style={Styles.inputView}>
+                <View style={Styles.justCenter}>
+                  <LocalSvg asset={item?.image} style={Styles.imageView} />
                 </View>
-                <Text
-                  numberOfLines={1}
-                  style={{
-                    fontSize: 12,
-                    lineHeight: 18,
-                    color: colors.black,
-                    marginLeft: 10,
-                    maxWidth: '90%',
-                  }}>
+                <Text numberOfLines={1} style={Styles.titleText}>
                   {item?.title}
                 </Text>
               </View>
